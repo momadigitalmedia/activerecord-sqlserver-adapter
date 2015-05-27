@@ -215,7 +215,6 @@ module ActiveRecord
               AND s.schema_id = s.schema_id
             INNER JOIN #{db_name}.sys.objects AS o
               ON s.schema_id = o.schema_id
-              AND o.is_ms_shipped = 0
               AND o.type IN ('U', 'V')
               AND o.name = columns.TABLE_NAME
             INNER JOIN #{db_name}.sys.columns AS c
